@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CSC402Lab02Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CourseListScreen(
+                    TaskTrackerScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
