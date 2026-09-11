@@ -1,34 +1,20 @@
-
-
-```markdown
 # Mobile Development Labs
 
-This repository contains my weekly lab work for the **Mobile Application Development** course.
+This repository contains my weekly lab work for the CSC402 Mobile Application Development course.
 
-The labs are implemented using **Kotlin** and **Android Studio**, with each lab organized in a separate folder.
+The projects are developed using Kotlin, Jetpack Compose, and Android Studio. Each lab is organized in its own folder with the required source code and documentation.
 
-## Tools & Technologies
+## Student Information
+
+- Name: Maha Aljoaib
+- Student ID: 2240006849
+- Major: Computer Science
+- Course: CSC402 Mobile Application Development
+
+## Tools and Technologies
+
 - Kotlin
+- Jetpack Compose
 - Android Studio
 - Git
 - GitHub
-
-## Repository Structure
-
-Each lab is stored in its own folder and includes the corresponding source files and a README describing the lab tasks.
-
-Mobile-Development-Labs/
-├── Lab-01/
-├── Lab-02/
-├── Lab-03/
-└── ...
-```
-
-## Purpose
-
-This repository is used to document, organize, and track my progress throughout the Mobile Application Development course.
-
-## Author
-
-**Maha AlJoaib**
-```
