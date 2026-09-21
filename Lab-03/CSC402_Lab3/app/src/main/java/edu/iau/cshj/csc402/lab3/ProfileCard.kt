@@ -1,6 +1,7 @@
 package edu.iau.cshj.csc402.lab3
 
 import androidx.compose.foundation.background
+import android.content.res.Configuration
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,8 +22,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import edu.iau.cshj.csc402.lab3.ui.theme.CSC402_Lab3Theme
 
 data class Student(
@@ -66,7 +69,7 @@ fun StudentCard(
                         Text(
                             text = "MA",
                             color = MaterialTheme.colorScheme.onPrimary,
-                            style = MaterialTheme.typography.titleMedium
+                            fontWeight = FontWeight.Bold
                         )
                     }
 
@@ -92,20 +95,22 @@ fun StudentCard(
                 ) {
                     Text(
                         text = student.name,
-                        style = MaterialTheme.typography.titleLarge,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
                     Text(
                         text = student.program,
-                        style = MaterialTheme.typography.bodyMedium,
+                        fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
                 Text(
                     text = student.gpa,
-                    style = MaterialTheme.typography.titleLarge,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.primary
                 )
             }
@@ -116,20 +121,27 @@ fun StudentCard(
 
             Text(
                 text = student.email,
-                style = MaterialTheme.typography.bodyMedium,
+                fontSize = 14.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             Text(
                 text = student.city,
-                style = MaterialTheme.typography.bodyMedium,
+                fontSize = 14.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }
 }
-
-@Preview(showBackground = true)
+@Preview(
+    name = "Light",
+    showBackground = true
+)
+@Preview(
+    name = "Dark",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 @Composable
 private fun StudentCardPreview() {
     CSC402_Lab3Theme {
