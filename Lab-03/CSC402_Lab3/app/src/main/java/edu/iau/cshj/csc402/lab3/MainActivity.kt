@@ -5,10 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import edu.iau.cshj.csc402.lab3.ui.theme.CSC402_Lab3Theme
 
 class MainActivity : ComponentActivity() {
@@ -20,22 +18,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             CSC402_Lab3Theme {
-                Scaffold(
+                Surface(
                     modifier = Modifier.fillMaxSize()
-                ) { innerPadding ->
-
-                    StudentCard(
-                        student = Student(
-                            name = "Maha AlJoaib",
-                            program = "Computer Science",
-                            gpa = "4.19",
-                            email = "2240006849@iau.edu.sa",
-                            city = "Khobar"
-                        ),
-                        modifier = Modifier
-                            .padding(innerPadding)
-                            .padding(16.dp)
-                    )
+                ) {
+                    ProfileScreen()
                 }
             }
         }
