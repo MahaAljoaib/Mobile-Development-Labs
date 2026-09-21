@@ -14,14 +14,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -43,10 +42,7 @@ fun StudentCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFF2F2F2)
-        )
+        shape = RoundedCornerShape(12.dp)
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -66,12 +62,12 @@ fun StudentCard(
                         modifier = Modifier
                             .size(52.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFF173B5E)),
+                            .background(MaterialTheme.colorScheme.primary),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = "MA",
-                            color = Color.White,
+                            color = MaterialTheme.colorScheme.onPrimary,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -81,10 +77,10 @@ fun StudentCard(
                             .size(14.dp)
                             .align(Alignment.BottomEnd)
                             .clip(CircleShape)
-                            .background(Color(0xFF4CAF50))
+                            .background(MaterialTheme.colorScheme.tertiary)
                             .border(
                                 width = 2.dp,
-                                color = Color.White,
+                                color = MaterialTheme.colorScheme.surface,
                                 shape = CircleShape
                             )
                     )
@@ -100,13 +96,13 @@ fun StudentCard(
                         text = student.name,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFF222222)
+                        color = MaterialTheme.colorScheme.onSurface
                     )
 
                     Text(
                         text = student.program,
                         fontSize = 14.sp,
-                        color = Color(0xFF666666)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
@@ -114,24 +110,24 @@ fun StudentCard(
                     text = student.gpa,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Medium,
-                    color = Color(0xFF222222)
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
 
             HorizontalDivider(
-                color = Color(0xFFD0D0D0)
+                color = MaterialTheme.colorScheme.outlineVariant
             )
 
             Text(
                 text = student.email,
                 fontSize = 14.sp,
-                color = Color(0xFF444444)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             Text(
                 text = student.city,
                 fontSize = 14.sp,
-                color = Color(0xFF444444)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }
