@@ -24,17 +24,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
 
-                    StudentCard(
-                        student = Student(
-                            name = "Maha AlJoaib",
-                            program = "Computer Science",
-                            gpa = "4.19",
-                            email = "2240006849@iau.edu.sa",
-                            city = "Khobar"
-                        ),
-                        modifier = Modifier
-                            .padding(innerPadding)
-                            .padding(16.dp)
+                    ModifierOrderScreen(
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
