@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    ProfileScreen()
+                    StudentsScreen()
                 }
             }
         }
